@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import '../styles/about.css';
 
 interface Post {
-  id: number;
   title: string;
+  id: number;
   body: string;
 }
 
@@ -16,9 +16,6 @@ const About: React.FC = () => {
     const fetchPosts = async () => {
       try {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-        if (!response.ok) {
-          throw new Error('Failed to fetch posts');
-        }
         const data = await response.json();
         setPosts(data);
       } catch (err) {
