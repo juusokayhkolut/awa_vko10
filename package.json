@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "start": "vite",
+    "dev": "vite",
+    "test": "jest",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "test": "jest"
+    "preview": "vite preview"
   },
   "dependencies": {
     "i18next": "^24.2.2",
